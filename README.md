@@ -12,15 +12,16 @@ be accessible through a url of the type xxxxxxxxx.onion.
 -  **SSH** Enabled on port 4242. It can be accesed by *sshuser* passing our public key to the container.
 
 ## Usage
-
-1. `` docker run -dp 4242:4242 -p 8080:80 --name "onion_server" -e [PUBLIC_KEY=your_public_key_path] tolino20/ft_onion ``
+1. Copy your ssh public key here ``cp $HOME/.ssh/id_rsa.pub .``
+2. ``docker build -t ft_onion .``
+3. `` docker run -dp 4242:4242 -p 8080:80 --name "onion_server" ft_onion ``
 
 ### Tor
-2. `` docker exec [CONTAINER_ID] cat /var/lib/tor/ft_onion/hostname ``
-3. Paste the output in Tor browser
+4. `` docker exec [CONTAINER_ID] cat /var/lib/tor/ft_onion/hostname ``
+5. Paste the output in Tor browser
 
 ### SSH
-2. `` shh sshuser@localhost -p 4242 ``
+4. `` shh sshuser@localhost -p 4242 ``
 
 ## Docs
 [Create Tor Hidden Onion Service Using Nginx](https://arcdetri.github.io/tor-hidden-onion-nginx.html)
