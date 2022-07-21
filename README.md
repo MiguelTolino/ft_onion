@@ -17,7 +17,7 @@ be accessible through a url of the type xxxxxxxxx.onion.
 3. `` docker run -dp 4242:4242 -p 8080:80 --name "onion_server" ft_onion ``
 
 ### Tor
-4. `` docker exec [CONTAINER_ID] cat /var/lib/tor/ft_onion/hostname `` -> OUTPUT(6wjlkyvlnznwhhmnmdn6t3yqrdfdur4yiyc5mnm7fqq3dcuxknvprdad.onion)
+4. `` docker exec [CONTAINER_ID] cat /var/lib/tor/ft_onion/hostname ``
 5. Paste the output in Tor browser
 
 ### SSH
