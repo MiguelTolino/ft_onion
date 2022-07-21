@@ -8,7 +8,7 @@ hides on the Tor network.
 ### 🐕‍🦺 Services
 
 - ❌ **Nginx**: runs a static web page: a single index.html file. The page will
-be accessible through a url of the type xxxxxxxxx.onion.
+be accessible through a url of the type *xxxxxxxxx.onion*
 - 🔐 **SSH** Enabled on port 4242. It can be accesed by *sshuser* passing our public key to the container.
 
 ## 📖 Usage
