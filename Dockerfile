@@ -21,8 +21,7 @@ RUN mv sshd_config /etc/ssh/
 
 #Nginx Configuration
 # Move files to their respective folders
-RUN mv /config/index.html /var/www/html/ && \
-	mv nginx.conf /etc/nginx/
+RUN mv nginx.conf /etc/nginx/ && cp -r /config/website/* /var/www/html
 
 # Configure TOR
 RUN bash config_tor.sh
