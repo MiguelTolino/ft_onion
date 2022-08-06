@@ -29,7 +29,7 @@ Port 4242
 # Authentication:
 
 #LoginGraceTime 2m
-#PermitRootLogin prohibit-password
+PermitRootLogin no
 #StrictModes yes
 #MaxAuthTries 6
 #MaxSessions 10
@@ -53,8 +53,8 @@ Port 4242
 #IgnoreRhosts yes
 
 # To disable tunneled clear text passwords, change to no here!
-#PasswordAuthentication yes
-#PermitEmptyPasswords no
+PasswordAuthentication no
+PermitEmptyPasswords no
 
 # Change to yes to enable challenge-response passwords (beware issues with
 # some PAM modules and threads)
@@ -65,7 +65,7 @@ ChallengeResponseAuthentication no
 #KerberosOrLocalPasswd yes
 #KerberosTicketCleanup yes
 #KerberosGetAFSToken no
-
+AllowUsers sshuser
 # GSSAPI options
 #GSSAPIAuthentication no
 #GSSAPICleanupCredentials yes
@@ -95,7 +95,7 @@ PrintMotd no
 #TCPKeepAlive yes
 #PermitUserEnvironment no
 #Compression delayed
-#ClientAliveInterval 0
+ClientAliveInterval 180
 #ClientAliveCountMax 3
 #UseDNS no
 #PidFile /var/run/sshd.pid
